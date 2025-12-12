@@ -1006,7 +1006,7 @@ This page implements the **two spiral design assignments** using the equations a
             st.pyplot(fig)
 
     st.markdown("---")
-    st.subheader("What to say in the oral (quick script)")
+    st.subheader("Key Takeaways/ Important things to note")
     if design_type == "Equiangular Spiral":
         st.write(
             "• The equiangular spiral is frequency independent because the geometry is angle-based.\n"
@@ -1971,3 +1971,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
