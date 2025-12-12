@@ -1934,7 +1934,7 @@ def main():
         layout="wide"
     )
 
-    st.sidebar.title("ECE474 Antennas Recap")
+    st.sidebar.title("ECE474 Antennas coursework - Mikayla Shankles")
     st.sidebar.markdown("Use this menu to switch between modules:")
 
     module = st.sidebar.radio(
