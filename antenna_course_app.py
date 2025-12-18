@@ -1922,6 +1922,161 @@ def module_mom_quiz():
     st.markdown(f"### Question {qnum}")
     st.markdown(answers[qnum])
 
+def module_antenna_measurements_lab():
+    st.header("Antenna Measurements Lab")
+
+    st.markdown(
+        """
+        This lab documents hands-on antenna measurements performed during the course using
+        a **Vector Network Analyzer (VNA)** and an **indoor antenna range (anechoic chamber)**.
+        The goal was to connect antenna theory with real measurements of
+        **impedance matching, transmission, radiation patterns, and broadband behavior**.
+        """
+    )
+
+    st.markdown("---")
+
+    # =====================================================
+    # PART 1 — VNA LAB (LINEAR WIRE ANTENNAS)
+    # =====================================================
+    st.subheader("1. VNA Measurements: Linear Wire Antennas")
+
+    st.image(
+        "IMG_8553.jpg",
+        caption="VNA bench setup used to measure S-parameters between two linear wire antennas",
+        use_container_width=True
+    )
+
+    st.markdown(
+        """
+        In this experiment, a **two-port Vector Network Analyzer (VNA)** was used to measure
+        S-parameters between two **linear wire antennas**.
+
+        Before taking measurements, a **Short–Open–Load (SOL) calibration** was performed
+        using a **50 Ω reference**, ensuring that cable and connector effects were removed.
+
+        The VNA display showed multiple traces:
+        - The **purple trace was labeled “21”**, indicating **S21 (forward transmission)** between the antennas
+        - The **blue and yellow traces showed deep dips**, which is typical of **reflection measurements**
+          (commonly S11 and S22)
+
+        The **dips in the blue and yellow traces** indicate frequencies where the antennas were
+        **well matched**, meaning less power was reflected and more power was accepted by the antenna.
+        This corresponds to **resonant behavior** of the linear wire antennas.
+        """
+    )
+
+    st.markdown(
+        """
+        **Key takeaway:**  
+        Reflection coefficients (S11, S22) reveal antenna resonance and impedance matching,
+        while S21 shows how efficiently power is transmitted between antennas.
+        """
+    )
+
+    st.markdown("---")
+
+    # =====================================================
+    # PART 2 — INDOOR ANTENNA RANGE (HORN ANTENNAS)
+    # =====================================================
+    st.subheader("2. Indoor Antenna Range: Horn Antennas")
+
+    st.image(
+        "IMG_8554(1).jpg",
+        caption="Indoor antenna range (anechoic chamber) lined with RF absorber material",
+        use_container_width=True
+    )
+
+    st.markdown(
+        """
+        Radiation pattern measurements were performed in the **indoor antenna range
+        (anechoic chamber)** located in **Holmes 453**.
+
+        The chamber is lined with RF absorber foam to:
+        - Minimize reflections
+        - Reduce multipath interference
+        - Simulate **free-space radiation conditions**
+
+        **Horn antennas** (sometimes informally referred to as “bell antennas”) were used
+        as both transmitting and receiving antennas.
+        Horn antennas are commonly used in antenna ranges because they have:
+        - Well-defined radiation patterns
+        - Good impedance matching
+        - Broad bandwidth
+        """
+    )
+
+    st.markdown("---")
+
+    # =====================================================
+    # PART 3 — FREE-SPACE MEASUREMENT & SOFTWARE
+    # =====================================================
+    st.subheader("3. Free-Space Transmission and Radiation Pattern Measurement")
+
+    st.image(
+        "IMG_8555(1).jpg",
+        caption="Antenna alignment and measurement display inside the indoor antenna range",
+        use_container_width=True
+    )
+
+    st.markdown(
+        """
+        Using the **antenna range software** provided in the lab handout,
+        free-space transmission measurements were performed.
+
+        The received signal level (**S21**) was measured as a function of:
+        - Frequency
+        - Antenna alignment
+        - Orientation inside the chamber
+
+        This allowed observation of fundamental antenna characteristics such as:
+        - Directionality
+        - Beamwidth
+        - Effects of alignment and polarization
+        """
+    )
+
+    st.markdown("---")
+
+    # =====================================================
+    # PART 4 — LOG-PERIODIC ANTENNA (LPDA)
+    # =====================================================
+    st.subheader("4. Broadband Directional Antenna: Log-Periodic Dipole Array (LPDA)")
+
+    st.image(
+        "IMG_8941.jpg",
+        caption="Log-periodic dipole array (LPDA) mounted inside the indoor antenna range",
+        use_container_width=True
+    )
+
+    st.markdown(
+        """
+        In a later lab, a **log-periodic dipole array (LPDA)** was measured.
+        The LPDA is a **directional broadband antenna** composed of multiple dipole elements
+        whose **lengths and spacing gradually change** along the boom.
+
+        In the indoor antenna range, the LPDA was used for **radiation pattern measurements**
+        to observe:
+        - Main beam direction
+        - Beamwidth
+        - Front-to-back behavior
+
+        After radiation pattern measurements, the LPDA was taken to the
+        **Network Analysis Lab (Holmes 491)**, where a VNA was used to examine
+        **bandwidth and broadband behavior** using S-parameter measurements.
+        """
+    )
+
+    st.markdown("---")
+
+    st.markdown(
+        """
+        **Overall conclusion:**  
+        These experiments demonstrated how antenna theory translates into real measurements.
+        Using a VNA and an anechoic chamber, we observed resonance, impedance matching,
+        transmission behavior, and radiation patterns for narrowband and broadband antennas.
+        """
+    )
 
 
 # ===========================
@@ -1946,7 +2101,9 @@ def main():
             "Notes & Theory",
             "Design Projects: Spirals",
             "Homeworks",
-            "MoM Quiz Answers"
+            "MoM Quiz Answers",
+            "Antenna Measurements Lab"
+
 
         )
     )
@@ -1965,10 +2122,14 @@ def main():
         module_homeworks()
     elif module == "MoM Quiz Answers":
         module_mom_quiz()
+    elif module == "Antenna Measurements Lab":
+    module_antenna_measurements_lab()
+
 
 
 
 
 if __name__ == "__main__":
     main()
+
 
