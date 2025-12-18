@@ -1990,7 +1990,7 @@ def module_antenna_measurements_lab():
     show_image(
         "IMG_8554(1).jpg",
         caption="Indoor antenna range (anechoic chamber) lined with RF absorber material",
-        rotate=90
+        rotate=-90
     )
 
     st.markdown(
@@ -2022,7 +2022,7 @@ def module_antenna_measurements_lab():
     show_image(
         "IMG_8555(1).jpg",
         caption="Antenna alignment and measurement display inside the indoor antenna range",
-        rotate=90
+        rotate=-90
     )
 
     st.markdown(
@@ -2052,7 +2052,7 @@ def module_antenna_measurements_lab():
     show_image(
         "IMG_8941.jpg",
         caption="Log-periodic dipole array (LPDA) mounted inside the indoor antenna range",
-        rotate=90
+        rotate=-90
     )
 
     st.markdown(
@@ -2137,6 +2137,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
