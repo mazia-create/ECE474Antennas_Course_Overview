@@ -2,7 +2,13 @@ import numpy as np
 import streamlit as st
 import matplotlib.pyplot as plt
 import math
+from PIL import Image
 
+def show_image(path, rotate=0, caption=None):
+    img = Image.open(path)
+    if rotate != 0:
+        img = img.rotate(rotate, expand=True)
+    st.image(img, caption=caption, use_container_width=True)
 
 # ===========================
 # Core computation functions
@@ -1941,10 +1947,10 @@ def module_antenna_measurements_lab():
     # =====================================================
     st.subheader("1. VNA Measurements: Linear Wire Antennas")
 
-    st.image(
+    show_image(
         "IMG_8553.jpg",
         caption="VNA bench setup used to measure S-parameters between two linear wire antennas",
-        use_container_width=True
+        rotate=0
     )
 
     st.markdown(
@@ -1981,10 +1987,10 @@ def module_antenna_measurements_lab():
     # =====================================================
     st.subheader("2. Indoor Antenna Range: Horn Antennas")
 
-    st.image(
+    show_image(
         "IMG_8554(1).jpg",
         caption="Indoor antenna range (anechoic chamber) lined with RF absorber material",
-        use_container_width=True
+        rotate=90
     )
 
     st.markdown(
@@ -2013,10 +2019,10 @@ def module_antenna_measurements_lab():
     # =====================================================
     st.subheader("3. Free-Space Transmission and Radiation Pattern Measurement")
 
-    st.image(
+    show_image(
         "IMG_8555(1).jpg",
         caption="Antenna alignment and measurement display inside the indoor antenna range",
-        use_container_width=True
+        rotate=90
     )
 
     st.markdown(
@@ -2043,10 +2049,10 @@ def module_antenna_measurements_lab():
     # =====================================================
     st.subheader("4. Broadband Directional Antenna: Log-Periodic Dipole Array (LPDA)")
 
-    st.image(
+    show_image(
         "IMG_8941.jpg",
         caption="Log-periodic dipole array (LPDA) mounted inside the indoor antenna range",
-        use_container_width=True
+        rotate=90
     )
 
     st.markdown(
@@ -2131,6 +2137,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
