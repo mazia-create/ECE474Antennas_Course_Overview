@@ -13,4 +13,4 @@ Interactive Streamlit application developed to visualize and summarize core ante
 - Streamlit
 
 ## Live Application
-[Launch App]([YOUR_LINK](https://ece474antennascourseoverview-5r5gfsgehhmbf6tcjtxhdc.streamlit.app/))
+[Launch App](https://ece474antennascourseoverview-5r5gfsgehhmbf6tcjtxhdc.streamlit.app/)
